@@ -7,7 +7,7 @@ $(document).ready(function() {
 
   // Output the temperature of a given ZIP code to the screen here.
   getTemperature(32605, function(temp) {
-    // The temp variable is set to some value;
+  	output.append(temp);
   });
 
 });

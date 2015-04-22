@@ -10,4 +10,5 @@ $(document).ready(function() {
 
   // Append something to 'output' here to make sure you can see
   // it on the screen
+   output.append('This is another line');
 });

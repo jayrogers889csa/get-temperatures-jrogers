@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link data-require="bootstrap-css@*" data-semver="3.0.0" rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+    <script data-require="jquery@*" data-semver="2.0.3" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <link data-require="bootstrap@*" data-semver="3.0.0" rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+    <script data-require="bootstrap@*" data-semver="3.0.0" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script data-require="underscore.js@*" data-semver="1.5.1" src="http://cdn.jsdelivr.net/underscorejs/1.5.1/underscore-min.js"></script>
+    <script data-require="backbone.js@*" data-semver="1.0.0" src="http://cdn.jsdelivr.net/backbonejs/1.0.0/backbone-min.js"></script>
+
+    <script src="seedrandom.js"></script>
+    <script src="support.js"></script>
+
+    <script src='Step1-Introduction.js'></script>
+    <script src='Step2-Temperature.js'></script>
+    <script src='Step3-MultipleTemperatures.js'></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body style='padding: 0 15px' >
+    <div class='container'>
+      <div class='page-header'>
+        <h1>
+          Welcome! <br/>
+          <small>
+            This exercise will help us talk through a few basic programming concepts.
+          </small>
+        </h1>
+      </div>
+
+      <div class='panel panel-info'>
+        <div class='panel-group' id='accordion-steps'>
+
+          <!-- Step #1 -->
+          <div class='panel panel-default'>
+            <div class='panel-heading'>
+              <h4 class='panel-title'>
+                <a data-toggle='collapse' data-parent='#accordion-steps' href="#collapseIntro">
+                  Step 1: Introduction
+                </a>
+              </h4>
+            </div>
+            
+            <div id="collapseIntro" class='introduction panel-collapse collapse'>
+              <div class='panel-body'>
+                <p>
+                  This page provides a few interactive elements we can use to
+                  work through the example.  Each step in the exercise has a JS
+                  file included on the page you can modify.  For instance, if you
+                  look at <code>Step1-Introduction.js</code>, you'll see the:
+                </p>
+                <pre>
+var output = new OutputView({ el: $('intro-output') });
+output.reset('Hello from <i>Introduction.js</i>');
+                </pre>
+                <p>
+                  You can modify that code to append more lines to it.  Try that
+                  now by adding this line:
+                </p>
+                <pre>
+output.append('This is another line');
+                </pre>
+
+                <p>Step 1 Output:</p>                    
+                <div class='well output'>
+                </div>
+		<p>Once you've done that -- don't over think it -- move on to Step 2.</p>
+              </div>
+            </div>
+          </div>
+          <!-- End Step #1 -->
+          
+          <!-- Step #2 -->
+          <div class='panel panel-default'>
+            <div class='panel-heading'>
+              <h4 class='panel-title'>
+                <a data-toggle='collapse' data-parent='#accordion-steps' href="#collapseGetTemperature">
+                  Step 2: The <code>getTemperature(...)</code> Method
+                </a>
+              </h4>
+            </div>
+            
+            <div id="collapseGetTemperature" class='temperature panel-collapse collapse'>
+              <div class='panel-body'>
+                <p>
+                  This page has a function called <code>getTemperature(..)</code> which 
+                  takes in a ZIP code and returns the temperature at that ZIP code.  For example:
+                  <pre>
+getTemperature(32605, function(temp) {
+    // The temp variable is set to some value;
+});
+                  </pre>
+                  The goal of this step is to call <code>getTemperature(...)</code>
+                  and have it print the temperature to the Output below.
+                </p>
+                
+                <p>Step 2 Output:</p>                    
+                <div class='well output'>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Step #2 -->
+
+
+          <!-- Step #3 -->
+          <div class='panel panel-default'>
+            <div class='panel-heading'>
+              <h4 class='panel-title'>
+                <a data-toggle='collapse' data-parent='#accordion-steps' href="#collapseMultiple">
+                  Step 3: Getting Multiple Temperatures
+                </a>
+              </h4>
+            </div>
+            
+            <div id="collapseMultiple" class='multiple-temperature panel-collapse collapse'>
+              <div class='panel-body'>
+                <p>
+                  Suppose we need to get the temperature at more than
+                  one location.  For example, I have an array of ZIP codes, and
+                  I want to get an array of temperatures using the 
+                  <code>getTemperature(...)</code> function described in Step #2.
+                </p>
+                <p>
+                  Implement some way of doing this in
+                  <i>Step3-MultipleTemperatures.js</i>
+                </p>
+                <pre>
+getTemperatures([32605, 11201, 90210], function(results) {
+    // the results here
+});
+                </pre>
+                
+                <p>Step 3 Output:</p>    
+                <div class='well output'>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Step #3 -->
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
